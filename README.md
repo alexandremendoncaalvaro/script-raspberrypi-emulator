@@ -9,9 +9,24 @@ This script works for Mac OS and Linux.
 For Windows, please use: http://www.rpi-emulator.com/
 
 ## Install ##
-To install use:
+### Mac OS Requisites ###
 ```bash
-chmod +x *.sh && ./rpi-install-full.sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+```bash
+brew install git
+```
+### Linux (Ubuntu) Requisites ###
+```bash
+sudo apt update && sudo apt upgrade
+```
+```bash
+sudo apt-get install git
+```
+
+### To clone this repository and install, use: ###
+```bash
+git clone https://github.com/alexandremendoncaalvaro/script-raspberrypi-emulator.git && chmod +x *.sh && ./rpi-install-full.sh
 ```
 After install, to run use:
 ```bash
