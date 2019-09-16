@@ -1,6 +1,6 @@
 # QEMU Raspbian (Raspberry Pi Emulator) #
 
-Script to install, config and run QEMU emulator for Raspberry Pi 3
+Script to install, config and run QEMU emulator for Raspberry Pi
 
 # IMPORTANT #
 QEMU doesn't work well with all Raspbian versions. Raspbian Stretch(2017-11-29) is tested and known to work.
@@ -14,9 +14,9 @@ For Windows, please use: http://www.rpi-emulator.com/
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 ```bash
-brew install git
+brew install git && brew cask install xquartz
 ```
-### Linux (Ubuntu) Requisites ###
+### Linux (Debian/Ubuntu) Requisites ###
 ```bash
 sudo apt update && sudo apt upgrade
 ```
@@ -42,7 +42,7 @@ sudo fdisk /dev/sda
 
 Display the partitions using the **p** command.
 
-Take note of the beginning of the second partition block. For exemple, my value was 125904.
+Take note of the beginning of the second partition block. For example, my value was 125904.
 Delete the second partition with the **d** command then **2**.
 If you again display the partitions it has disappeared.
 
@@ -58,11 +58,17 @@ df -h
 ```
 Now resize the filesytem:
 ```bash
-sudo resize2fs /dev/sda
+sudo resize2fs /dev/sda2
 ```
 Verify if it works:
 ```bash
 df -h
+```
+
+## SSH access ##
+You can now log in via ssh as well:
+```bash
+ssh -p 5022 -X pi@localhost
 ```
 
 # Are you a native english speaker?
