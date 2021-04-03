@@ -14,19 +14,19 @@ For Windows, please use: http://www.rpi-emulator.com/
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 ```bash
-brew install git && brew cask install xquartz
+brew install git xquartz wget
 ```
 ### Linux (Debian/Ubuntu) Requisites ###
 ```bash
 sudo apt update && sudo apt upgrade
 ```
 ```bash
-sudo apt-get install git
+sudo apt-get install git wget
 ```
 
 ### To clone this repository and install, use: ###
 ```bash
-git clone https://github.com/alexandremendoncaalvaro/script-raspberrypi-emulator.git && chmod +x *.sh && ./rpi-install-full.sh
+git clone https://github.com/alexandremendoncaalvaro/script-raspberrypi-emulator.git && cd script-raspberrypi-emulator && chmod +x *.sh && ./rpi-install-full.sh
 ```
 After install, to run use:
 ```bash
